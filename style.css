@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #343434;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*header y navbar*/
+.header-portada {
+    background-image: url(images/portada.png);
+    background-size: cover;
+    background-position: center;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.navbar {
+    border-top: 1px solid rgb(84, 84, 84);
+    border-bottom: 1px solid rgb(84, 84, 84);
+}
+
+/*main section*/
+section h1 {
+    text-align: center;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+    padding: 1rem;
+    background-color: #E1C191;
+    font-size: 2rem;
+    width: auto;
+}
+
+section p {
+    text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
+    list-style-position: outside;
+}
+
+#carouselExampleIndicators{
+    width: 500px;
+    margin:auto;
+}
+
+.fondo-svg {
+    background: url(images/Fondo\ de\ pantalla\ para\ escritorio\ organizador.png) no-repeat center center fixed;
+    background-size: cover;
+    background-color:white;
+}
+
+footer {
+    background-color: #E1C191;
+    color: #737373;
+    height: auto;
+    padding-left: 100px;
+    position: relative;
+    border-top: 2px solid black;
+}
+
+h3 {
+    color: #343434;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    margin-left: 30px;
+}
