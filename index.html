@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Carpintería VINNE</title>
 </head>
 <body>
@@ -120,18 +121,81 @@
             </div>
             <br>
             
-            <p>Para ver todos nuestros trabajos visite nuestra cuenta de instagram <a href="https://www.instagram.com/vinne.sr/">VINNE.SR</a></p>
+            <p>Para ver todos nuestros trabajos visite nuestra cuenta de instagram <a href="https://www.instagram.com/vinne.sr/" target="_blank">VINNE.SR</a></p>
         </section>
 
         <section id="cotizacion"><br>
             <h1>COTIZACIÓN</h1><br>
-            <p>Para solicitar una cotización rellena el formulario haciendo click <a href="">aquí</a>.</p>
+            <p>Para solicitar una cotización rellena el formulario haciendo click <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" style="color:#fff">Aquí</button></p>
+            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Formulario de cotización</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <form id="contact-form1" enctype="multipart/form-data">
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="phone" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="address" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="type" class="form-label">Tipo de mueble</label>
+                        <select class="form-select" id="type" name="type" required>
+                          <option value="">Seleccione uno</option>
+                          <option value="Table">Muebles de cocina</option>
+                          <option value="Chair">Muebles para habitación</option>
+                          <option value="Bed">Otros</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="observations" class="form-label">Observaciones</label>
+                        <textarea class="form-control" id="observations" name="observations" rows="3"></textarea>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
         </section>
     </main>
     <br>
     <footer>
       <br>
         <h3 id="contacto">CONTACTO</h3>
+        <br>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <form id="contact-form">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" required></textarea>
+        
+              <input type="submit" value="Enviar">
+            </form>
+          </div>
+        </div>
+        <br>
+        <div id="status"></div>
         <div class="social-links text-center">
           <a href="mailto:marcosdanielbasile@gmail.com" target="_blank"><img src="images/icons8-gmail.svg" alt="gmail"></a><br>
           <a href="https://wa.me/+5492604598242" target="_blank"><img src="images/icons8-whatsapp.svg" alt="whatsapp"></a>
